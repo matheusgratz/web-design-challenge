@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MG&nbsp;&nbsp;|&nbsp;&nbsp;Web Viz Challenge</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Image and text -->
+        <div class="container">
+            <img src="resources\mg_logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            <a class="navbar-brand text-white" href="index.html" >&nbsp; Web Visualization Challenge &#09 &#09&#09&#09&#09&#09</a>
+            
+            <!-- Hamburguer Button -->   
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+        <!-- Dropdown -->   
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Plots
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="assets\temperature.html">Max Temperature</a>
+                            <a class="dropdown-item" href="assets\humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="assets\cloudiness.html">Cloudiness</a>
+                            <a class="dropdown-item" href="assets\windspeed.html">Wind Speed</a>
+                        </div>
+                    </li>
+                    <!-- Nav Item -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="assets\comparison.html">Comparison</a>
+                    </li>
+                    <!-- Nav Item -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="assets\data.html">Data</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content">
+
+        <div class="row">
+            <div class="col-md-12">&nbsp;</div>
+        </div>  
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="col-md-12">
+                    <h3>Summary: Latitude vs. X</h3>
+                    <p class="text-small-small">X = Temperature, Cloudiness, Wind Speed or Humidity.</p>
+                    <hr>                   
+                    <div class="thumbnail">
+                        <img class="rounded mx-auto d-block float-left" src="visualizations\lat_vs_temp_regresion_southern.png" width="50%" alt="Latitude vs. Temp (F) - Southern Hemisphere">
+                    </div>
+
+                    <p class="text-justify">
+                        In this example, I have created a Python script to visualize the weather of 500+ cities across the world of varying distance from the equator.
+                        To accomplish this, I've used a simple Python library, the OpenWeatherMap API, and a little common sense to create a representative model of weather across world cities.
+                    </p>
+
+                    <p class="text-justify">
+                        With the information gathered, I've used Pandas library to organize, clean, analize the information. Also, with Pandas, I ploted the information in different scatter plots to understand the relationship between the diferente variables.
+                    </p>
+
+                    <div class="thumbnail">
+                        <img class="rounded mx-auto d-block float-right" src="visualizations\lat_vs_temp_regresion_northern.png" width="50%" alt="Latitude vs. Temp (F) - Northern Hemisphere">
+                    </div>
+
+                    <p>
+                        Hypotesis to be proven:
+                        <ul>
+                            <li>Temperature (F) vs. Latitude</li>
+                            <li>Humidity (%) vs. Latitude</li>
+                            <li>Cloudiness (%) vs. Latitude</li>
+                            <li>Wind Speed (mph) vs. Latitude</li>
+                        </ul>
+                    
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4" >
+                <div class="col-md-12">
+                    <h3>Visualizations</h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3 col-md-6">
+                            <a href="assets\temperature.html"><img src="visualizations\lat_vs_temp_scatter.png" width="100%"  alt="temperature">
+                            </a> 
+                        </div>
+                        <div class="col-3 col-md-6">
+                            <a href="assets\humidity.html"><img src="visualizations\lat_vs_humidity_scatter.png" width="100%" alt="humidity"></a>
+                        </div>
+                   
+                        <div class="col-3 col-md-6">
+                            <a href="assets\cloudiness.html"><img src="visualizations\lat_vs_cloud_scatter.png" width="100%"  alt="cloudiness"></a>
+                        </div>
+
+                        <div class="col-3 col-md-6">
+                            <a href="assets\windspeed.html"><img src="visualizations\lat_vs_wind_scatter.png"width="100%"  alt="wind speed"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Boostrap JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+<footer class="page-footer font-tiny footer-dark font-weight-light">
+    <hr>
+    <div class="footer-copyright text-center py-3">
+        Author: Matheus Gratz &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Contact: 
+        <a href="mailto:matheusgratz@gmail.com">matheusgratz@gmail.com</a> 
+        &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="https://github.com/matheusgratz/">Visit my Github</a> &nbsp;&nbsp;&nbsp; 
+        &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; © Copyright 2020</div>      
+</footer>
+
+</html>
